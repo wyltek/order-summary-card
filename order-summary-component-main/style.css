@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* import google font */
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* Colors */
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    --ff-red-hat: 'Red Hat Display', sans-serif;
+}
+
+
+
+body {
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-color: var(--pale-blue);
+    background-repeat: no-repeat;
+    background-size: contain;  
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.hero {
+    width: 100%;
+}
+
+.container {
+    width: 453px;
+    height: 700px;
+    background-color: #ffff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.content {
+    margin: 50px;
+}
+
+h1 {
+    color: var(--dark-blue);
+    font-family: var(--ff-red-hat);
+    font-weight: 900;
+    text-align: center;
+}
+
+p {
+    color: var(--desaturated-blue);
+    font-family: var(--ff-red-hat);
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.3;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.plan {
+    background-color: var(--very-pale-blue);
+    padding: 1.3rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 33px;
+
+    a {
+        font-family: var(--ff-red-hat);
+        font-weight: 700;
+        color: var(--bright-blue);
+        font-size: 14px;
+    }
+
+    a:hover {
+        text-decoration: none;
+        opacity: 0.7;
+    }
+}
+
+
+.left-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    b {
+        color: var(--dark-blue);
+        font-family: var(--ff-red-hat);
+        font-size: 15px;
+        font-weight: 900;
+        padding-bottom: 5px;
+    }
+
+    span {
+        color: var(--desaturated-blue);
+        font-weight: 700;
+        font-size: 16px;
+        font-family: var(--ff-red-hat);
+    }
+}
+
+.annual {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+
+    button {
+        padding: 1.3em;
+        background-color: var(--bright-blue);
+        border: none;
+        border-radius: 10px;
+        color: #ffff;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: var(--ff-red-hat);
+        cursor: pointer;
+        box-shadow: 0 10px 25px rgba(74, 55, 139, 0.288);
+    }
+
+    button:hover {
+        opacity: 0.7;
+    }
+
+    a {
+        text-align: center;
+    }
+
+    .cancel-order {
+        text-decoration: none;
+        color: var(--desaturated-blue);
+        font-family: var(--ff-red-hat);
+        font-weight: 900;
+        font-size: 14px;
+    }
+
+    a:hover {
+        color: var(--dark-blue);
+    }
+}
+
+/* Responsive mode to change the background */
+
+@media screen and (max-width: 500px) {
+    body {
+        background-image: url(/images/pattern-background-mobile.svg);
+    }
+}
+
+
+
